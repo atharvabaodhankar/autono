@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/79f75f2740.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- https://www.wix.com/demone2/autono -->
     <title>Autono</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#"> <h2>AUTONO</h2></a>
+      </div>
+      <ul>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <a href="#" class="btn-subscribe">Subscribe</a>
+      </ul>
+      <div class="hamburger">
+        <div class="hambar"></div>
+        <div class="hambar"></div>
+        <div class="hambar"></div>
+      </div>
+    </nav>
+    <section id="hero">
+      <div class="hero-main">
+        <div class="hero">
+          <h1>THE FUTURE OF MOBILITY IS HERE</h1>
+          <h2>Discover the safest self-driving experience with Autono.</h2>
+        </div>
+     
+      </div>
+      <div class="hero-black">
+        <img
+          src="https://static.wixstatic.com/media/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png/v1/fill/w_1839,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/84770f_3ebbf7ac3e26427b83ca50c82aabaaf8~mv2.png"
+          alt=""/>
+      </div>
+      <video class="hero-video" src="hero.mp4" autoplay loop></video>
+    </section>
+    <section id="vision"></section>
+    <script>
+      var navbar = document.querySelector("nav");
+      var hamburger = document.querySelector(".hamburger");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navbar.classList.toggle("active");
+      });
+
+      window.addEventListener("scroll", () => {
+        if (scrollY > 400) {
+          navbar.classList.add("show");
+        } else {
+          navbar.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
 </html>

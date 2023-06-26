@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+p{
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+h3{
+    font-size: 1.4rem;
+}
+html{
+    font-size: 62.5%;
+}
+.logo h2{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #000;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .3s ease;
+    z-index: 90;
+}
+nav.show{
+    background-color: #ffff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+nav ul li {
+    margin: 0 1.5rem;
+}
+nav ul li a{
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    color: #000;
+    transition: all .3s ease;
+}
+nav ul li a:hover{
+    color: #C45308;
+}
+.btn-subscribe{
+    color: #fff;
+    background-color: #000;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    border: 1px solid #000;
+    transition: all .3s ease;
+    font-size: 1.8rem;
+}
+.btn-subscribe:hover{
+    color: #000;
+    background-color: #ffff;
+}
+
+/* Hero */
+#hero{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 90vh;
+    position: relative;
+    background-image: url(https://static.wixstatic.com/media/c837a6_02de7d4c43d44b7b890854049ed75da8f000.jpg/v1/fill/w_1839,h_840,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c837a6_02de7d4c43d44b7b890854049ed75da8f000.jpg);
+}
+.hero-video{
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    position: absolute;
+}
+.hero-main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 17vh 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 700px;
+}
+.hero h1{
+    font-size: 7rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.hero h2{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.hero-black{
+    position: absolute;
+    bottom: -190px;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+}
+.hero-black img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hamburger{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    height: 6rem;
+    width: 6rem;
+    margin-right: 2rem;
+    z-index: 100;
+}
+.hambar{
+    width: 3.1rem;
+    height:.3rem;
+    background-color: #000;
+    position: absolute;
+    border-radius: 1rem;
+    transition: all .3s ease;
+}
+.hambar:nth-child(1){
+    top: 18px;
+}
+.hambar:nth-child(3){
+    bottom: 18px;
+}
+.hamburger.active .hambar:nth-child(1){
+    transform: rotate(45deg);
+    top: inherit;
+}
+.hamburger.active .hambar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .hambar:nth-child(3){
+    transform: rotate(-45deg);
+    bottom: inherit;
+}
+
+/* Vision */
+#vision{
+    height: 100vh ;
+    background-color: #000;
+}
+@media screen and (max-width:1450px) {
+    .hero-black {
+        bottom: -11vh;
+    }
+}
+@media screen and (max-width:950px) {
+    .hero-black {
+        bottom: -11vh;
+    }
+}
+@media screen and (max-width:850px) {
+    .hamburger{
+        display: inherit;
+    }
+    nav ul{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        height: 400px;
+        background-color: #fff;
+        transition: all .4s ease;
+        z-index: 5;
+    }
+    nav ul li{
+        margin: 2rem 0;
+    }
+    nav.active ul{
+        top: 0;
+    }
+    .hero-black {
+        bottom: -11vh;
+    }
+}
+@media screen and (max-width:700px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .hero {
+        width: 90%;
+    }
+    .hero-black {
+        bottom: -11vh;
+    }
+}
+@media screen and (max-width:600px) {
+    
+}
+@media screen and (max-width:500px) {
+    
+}
+@media screen and (max-width:400px) {
+    .hero-black {
+        bottom: -11vh;
+    }
+}
+@media screen and (max-width:300px) {
+    
+}
