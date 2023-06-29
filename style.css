@@ -14,6 +14,12 @@ p{
 h3{
     font-size: 1.4rem;
 }
+.h2-main{
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
 html{
     font-size: 62.5%;
 }
@@ -168,17 +174,83 @@ nav ul li a:hover{
 
 /* Vision */
 #vision{
-    height: 100vh ;
     background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10rem 0;
 }
+.vision{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
+.vision-main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+    color: #fff;
+    width: 400px;
+    margin-left: 4rem;
+}
+.vision-main h1{
+    font-size: 3rem;
+    margin: 5rem 0;
+    font-weight: 400;
+}
+.vision-img{
+    width: 1000px;
+    overflow: hidden;
+}
+.vision-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bar{
+    height: 500px;
+    width: 2px;
+    background-color: #a3a3a3;
+    position: relative;
+}
+.bar::after{
+    position: absolute;
+    width: 4px;
+    background-color: #fff;
+    height: 150px;
+    content: '';
+    top: 20%;
+}
+
 @media screen and (max-width:1450px) {
     .hero-black {
         bottom: -11vh;
     }
 }
+@media screen and (max-width:1200px) {
+    .vision-img img{
+        width: 131%;
+    }
+}
 @media screen and (max-width:950px) {
     .hero-black {
         bottom: -11vh;
+    }
+    #vision{
+        flex-direction: column;
+        overflow: visible;
+    }
+    .vision-img img {
+        width: 100%;
+    }
+    .vision-img {
+        width: 100%;
+    }
+    .vision-main {
+        width: 80%;
     }
 }
 @media screen and (max-width:850px) {
@@ -216,9 +288,14 @@ nav ul li a:hover{
     .hero-black {
         bottom: -11vh;
     }
+    .vision-img img {
+        width: 130%;
+    }
 }
 @media screen and (max-width:600px) {
-    
+    .vision-main h1 {
+        font-size: 2.3rem;
+    }
 }
 @media screen and (max-width:500px) {
     
