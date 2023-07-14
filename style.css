@@ -327,12 +327,75 @@ nav ul li a:hover{
     height: 100%;
     object-fit: cover;
 }
+/* Info */
+#info{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 6rem 0;
+}
+.info-img{
+    width: 50%;
+}
+.info-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info{
+    width: 500px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.info h1{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.info p{
+    margin: 3rem 0;
+}
+/* Perce */
+#perce{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6rem 0;
+}
+.perce{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 2rem;
+    width: 500px;
+}
+.perce h1{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.perce p{
+    margin: 2rem 0;
+}
+.perce-img{
+    width: 900px;
+}
+.perce-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 @media screen and (max-width:1450px) {
     .hero-black {
         bottom: -11vh;
     }
     .driving-img {
         width: 600px;
+    }
+    .perce-img {
+        width: 660px;
     }
 }
 @media screen and (max-width:1200px) {
@@ -341,6 +404,9 @@ nav ul li a:hover{
     }
     .driving-img {
         width: 450px;
+    }
+    .info {
+        width: 340px;
     }
 }
 @media screen and (max-width:950px) {
@@ -375,6 +441,29 @@ nav ul li a:hover{
     .driving-img {
         width: 90vw;
     }
+    #info{
+        flex-direction: column-reverse;
+    }
+    .info-img{
+        width: 90%;
+    }
+    .info {
+        width: 90%;
+        padding: 0;
+    }
+    #perce{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .perce-img {
+        width: 100%;
+    }
+    .perce{
+        margin-bottom: 5rem;
+        width: 90%;
+        padding: 0;
+    }
+
 }
 @media screen and (max-width:850px) {
     .hamburger{
@@ -425,6 +514,12 @@ nav ul li a:hover{
         font-size: 2rem;
     }
     .driving h1 {
+        font-size: 3rem;
+    }
+    .info h1 {
+        font-size: 3rem;
+    }
+    .perce h1{
         font-size: 3rem;
     }
 }
